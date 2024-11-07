@@ -41,7 +41,7 @@ const HomePage = () => {
               <SnapCard key={snap._id} snap={snap} />
             ))}
           </Grid>
-          {snaps.length === -1 && (
+          {snaps.length === 0 && (
             <Text
               fontSize="xl"
               textAlign={"center"}
