@@ -50,10 +50,14 @@ export const updateSnap = async (req, res) => {
 export const deleteSnap = async (req, res) => {
   const { id } = req.params;
 
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    res.status(404).json({ success: false, message: "Snap id doesn't exist" });
+  }
+
   try {
     await Snap.findByIdAndDelete(id);
     res.status(200).json({ success: true, message: "Snap Deleted" });
   } catch (error) {
-    res.status(404).json({ success: false, message: "Snap not found" });
+    res.status(500).json({ success: false, message: "Server Error" });
   }
 };
