@@ -15,7 +15,7 @@ const HomePage = () => {
   console.log("snaps", snaps);
   return (
     <div>
-      <Container maxW="container.xl" py={12}>
+      <Container maxW="container.xl" py={12} >
         <VStack spacing={8}>
           <Text
             fontSize={{ base: "22", sm: "28" }}

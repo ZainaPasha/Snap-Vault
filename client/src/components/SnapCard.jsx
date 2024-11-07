@@ -86,12 +86,12 @@ const SnapCard = ({ snap }) => {
       />
 
       <Box p={4}>
-        <Heading as="h3" size="md" mb={2}>
+        <Heading as="h3" size="md" mb={2} color="gray.600">
           {snap.title}
         </Heading>
 
         <Text fontWeight="bold" fontSize="xl" color="gray.600" mb={4}>
-          ${snap.description}
+          {snap.description}
         </Text>
 
         <HStack spacing={2}>

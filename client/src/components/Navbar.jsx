@@ -10,12 +10,18 @@ const Navbar = () => {
   
   return (
     <Container
-      maxW={"1140px"}
-      px={4}
-      marginBlock={4}
-      bg={{ base: "white", _dark: "transparent" }}
-      border={{ _dark: "2px solid yellow" }}
-    >
+    maxW={"1140px"}
+    px={4}
+    marginBlock={4}
+    bg={{
+      base: "orange.50", 
+      _dark: "gray.800", 
+    }}
+    borderRadius="md" 
+    boxShadow="md" 
+    borderWidth="1px" 
+    borderColor={{ base: "orange.200", _dark: "yellow.500" }} 
+  >
       <Flex
         h={16}
         alignItems={"center"}
@@ -30,9 +36,9 @@ const Navbar = () => {
           fontWeight={"bold"}
           textTransform={"uppercase"}
           textAlign={"center"}
-          bg="linear-gradient(to right, orange, yellow)"
+          bg={{base:"orange"}}
           bgClip="text"
-          color="transparent"
+         
         >
           <Link to={"/"}>Snap Vault</Link>
         </Text>

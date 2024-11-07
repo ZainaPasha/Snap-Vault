@@ -8,7 +8,10 @@ import { Toaster} from "@/components/ui/toaster"
 
 const App = () => {
   return (
-    <Box minH={"100vh"}>
+    <Box minH={"100vh"} bg={{
+      base: "orange.50", 
+      _dark: "gray.800", 
+    }}>
       <Navbar />
       <Toaster />
       <Routes>
